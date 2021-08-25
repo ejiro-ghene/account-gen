@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.btn {
+  position: absolute;
+  top: 35rem;
+  padding-left: 28.8rem;
+}
+
+.b-1 {
+  background-color: #1ba098;
+  border-radius: 7px;
+  width: 11.7rem;
+  color: #ffffff;
+  height: 3.5rem;
+}
+
+.b-2 {
+  color: #1ba098;
+  border: 1px solid #1ba098;
+  border-radius: 7px;
+  width: 11.7rem;
+  height: 3.5rem;
+}
+
+.infograph {
+  background-color: #051622;
+}
