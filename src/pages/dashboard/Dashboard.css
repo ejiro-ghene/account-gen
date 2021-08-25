@@ -1,0 +1,42 @@
+.dash-container {
+  background-color: #0a2437ee;
+  justify-content: center;
+  height: 100%;
+}
+
+.task-bar {
+  background-color: #051622;
+  width: 30rem;
+  height: 2rem;
+  /* margin-top: 30px; */
+}
+.dash-task {
+  grid-template-columns: 1fr 1fr;
+}
+
+.one,
+.two,
+.three,
+.four {
+  background-color: #051622;
+  width: 30rem;
+  color: #ffffff;
+  padding: 10px 0 0 10px;
+  height: 15rem;
+  /* margin-top: 50px 0 0 -10; */
+
+  /* height: 30rem; */
+}
+
+/* .one,
+.two {
+  grid-template-row: 1fr 2fr;
+} */
+/*  
+#1b2039 fullscreen
+#1f2641
+#2effb2
+#2df9ae
+#20b894
+#e84398
+*/

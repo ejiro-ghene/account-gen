@@ -1,0 +1,43 @@
+.reg-info {
+  position: absolute;
+}
+
+.reg-info form {
+  background-color: rgba(71, 72, 77, 0.871);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.251);
+  backdrop-filter: blur(9px);
+  border-radius: 15px;
+}
+
+.reg-info label {
+  margin-left: 15px;
+}
+
+::placeholder {
+  padding-left: 16px;
+}
+
+.reg-info input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  color: #b4b8cc;
+  background: linear-gradient(0deg, #ffffff25, #ffffff29),
+    linear-gradient(0deg, #121212, #121212);
+  border: none;
+  height: 60px;
+  border-radius: 4px;
+  margin-left: 2px;
+}
+
+.reg-button {
+  border: none;
+  border-radius: 5px;
+  width: 350px;
+  background-color: #bd220b;
+  margin-bottom: 20px;
+  box-shadow: 0px 10px 18px #bd220b33, 0px 0px 1px #bd220b4f;
+  color: #ffffff;
+  margin-left: 15px;
+}

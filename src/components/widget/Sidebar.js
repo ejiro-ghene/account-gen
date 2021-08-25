@@ -1,0 +1,55 @@
+import React from "react";
+import "./Sidebar.css";
+import { FaUserCircle } from "react-icons/fa";
+
+function Sidebar() {
+  return (
+    <>
+      <section className="sidenav absolute inset-y-0 w-40 ">
+        {/* <section className="user-profile-container py-5 px-2">
+          <button className="user-profile-button w-44 flex justify-between p-2 ">
+            <div className="avatar-icon text-4xl">
+              <FaUserCircle />
+            </div>
+
+            <div className="profile-id text-white ">
+              <h4 className="">Michael</h4>
+              <h6 className="active-text text-xs ">Active</h6>
+            </div>
+          </button>
+        </section> */}
+
+        <section className="side-text flex justify-center py-10 text-white ">
+          <nav className="grid grid-row-4 gap-9 py-5 ">
+            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+              Task
+            </a>
+            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700 ">
+              Proxy
+            </a>
+            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+              Account
+            </a>
+            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+              Setting
+            </a>
+          </nav>
+          {/* <button>
+            <h3 className="  ">Task</h3>
+          </button>
+          <button>
+            <h3 className="  ">Proxy</h3>
+          </button>
+          <button>
+            <h3 className="  ">Account</h3>
+          </button>
+          <button>
+            <h3 className="  ">Setting</h3>
+          </button> */}
+        </section>
+      </section>
+    </>
+  );
+}
+
+export { Sidebar };
