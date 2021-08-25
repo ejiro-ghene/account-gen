@@ -1,9 +1,56 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Sidebar, Footer } from "../../components";
 import { Logo } from "../../assets";
 import "./Signup.css";
 
-function Signup() {
+const Signup = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const [password, setPassword] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  const [SuccessMsg, setSuccessMsg] = useState("");
+
+  const handleEmailChange = (e) => {
+    setSuccessMsg("");
+    setEmailError("");
+    setEmail(e.target.value);
+  };
+
+  const handlePasswordChange = (e) => {
+    setSuccessMsg("");
+    setPasswordError("");
+    setPassword(e.target.value);
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    if (email !== "") {
+      const emailRegex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
+      if (emailRegex.test(email)) {
+        setEmailError("");
+        if (email === "ad@demo.com") {
+          setEmailError("");
+          if (password === "demo") {
+            setSuccessMsg("You have successfully logged in");
+          } else {
+            setPasswordError("Password does not match with the email address");
+          }
+        } else {
+          setEmailError("email does not match with our database");
+        }
+      }
+    } else {
+      setEmailError("Email Required");
+    }
+
+    if (password !== "") {
+    } else {
+      setPasswordError("Password Required");
+    }
+  };
   return (
     <>
       <main className="acct-signup-container min-h-screen mx-14">
@@ -25,14 +72,20 @@ function Signup() {
             <fieldset>
               <legend></legend>
               <header className="mt-20 flex justify-center font-semibold text-2xl ">
-                LOGIN
+                SIGNUP
               </header>
-              <form className="grid self-center gap-6 mx-20 mt-14">
+              {SuccessMsg && <div className="success-msg">{SuccessMsg}</div>}
+              <form
+                className="grid self-center gap-6 mx-20 mt-14"
+                onSubmit={handleFormSubmit}
+              >
                 <label className="text-xl">Email</label>
                 <input
                   className="border border-black "
                   name="email"
                   type="email"
+                  onChange={handleEmailChange}
+                  value={email}
                 />
 
                 <label className="text-xl"> Password</label>
@@ -40,7 +93,12 @@ function Signup() {
                   className="border border-black"
                   name="password"
                   type="text"
+                  onChange={handlePasswordChange}
+                  value={password}
                 />
+                {passwordError && (
+                  <div className="error-msg">{passwordError}</div>
+                )}
                 <h4 className="reminder  mt-2 text-xl">Forget Password</h4>
                 <button className="signup h-12 text-xl mt-8">Sign Up</button>
                 {/* <span className="text-gray-500 text-xl">
@@ -68,6 +126,6 @@ function Signup() {
       <Footer />
     </>
   );
-}
+};
 
 export { Signup };

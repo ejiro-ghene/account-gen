@@ -49,24 +49,24 @@ function Landing() {
               vestibulum.
             </p>
           </div>
-          <div className="m-24 shadow-2xl h-72 grid grid-cols-3 gap-4">
-            <div>
-              <img className="block" src={Outlook} alt="" />
+          <div className="m-24 shadow-2xl  grid grid-cols-3 gap-4">
+            <div className="text-center">
+              <img className="block " src={Outlook} alt="" />
             </div>
-            <div>
-              <img className="block" src={Amazon} alt="" />
+            <div className="text-center">
+              <img className="block " src={Amazon} alt="" />
             </div>
-            <div>
-              <img className="block" src={Nike} alt="" />
+            <div className="text-center">
+              <img className="block " src={Nike} alt="" />
             </div>
-            <div>
-              <img className="block" src={Gmail} alt="" />
+            <div className="text-center">
+              <img className="block  pl-5" src={Gmail} alt="" />
             </div>
-            <div>
-              <img className="block" src={Adidas} alt="" />
+            <div className="text-center">
+              <img className="block " src={Adidas} alt="" />
             </div>
-            <div>
-              <img className="block" src={Yahoo} alt="" />
+            <div className="text-center">
+              <img className="block " src={Yahoo} alt="" />
             </div>
           </div>
         </section>
@@ -153,3 +153,5 @@ function Landing() {
 }
 
 export { Landing };
+
+// style={{ border: "1px solid black" }}
