@@ -12,6 +12,8 @@ import {
   Easy,
   Reliable,
   Image1,
+  Header1,
+  Img,
 } from "../../assets";
 import { Navbar, Sidebar, Footer } from "../../components";
 
@@ -22,9 +24,26 @@ function Landing() {
         <Navbar className="" />
         <header className="relative ">
           <div>
-            <img className="block" src={Header} alt="" />
+            <img
+              className="object-cover w-full header-img "
+              src={Header1}
+              alt=""
+            />
+            <div className=" header-overlay absolute inset-0"></div>
           </div>
-
+          <img
+            className=" logo-header absolute flex justify-center"
+            src={Img}
+            alt=""
+          />
+          <div className="header-text absolute ">
+            <h1 className="font-semibold text-6xl flex justify-center">
+              ALL IN ONE GENERATOR
+            </h1>
+            <h6 className="flex justify-center font-semibold text-2xl mt-5">
+              EASILY LOG INTO MULTIPLE ACCOUNTS.
+            </h6>
+          </div>
           <div className="btn flex gap-4">
             <div>
               <button className="b-1  text-xl ">REGISTER</button>
@@ -49,23 +68,23 @@ function Landing() {
               vestibulum.
             </p>
           </div>
-          <div className="m-24 shadow-2xl  grid grid-cols-3 gap-4">
-            <div className="text-center">
+          <div className="m-20 shadow-2xl  grid grid-cols-3 gap-">
+            <div className="text-center flex justify-center h-16 mt-16">
               <img className="block " src={Outlook} alt="" />
             </div>
-            <div className="text-center">
+            <div className="text-center flex justify-center h-16 mt-16">
               <img className="block " src={Amazon} alt="" />
             </div>
-            <div className="text-center">
+            <div className="text-center flex justify-center h-16 mt-16">
               <img className="block " src={Nike} alt="" />
             </div>
-            <div className="text-center">
-              <img className="block  pl-5" src={Gmail} alt="" />
+            <div className="text-center flex justify-center h-16 mt-16">
+              <img className="block  " src={Gmail} alt="" />
             </div>
-            <div className="text-center">
+            <div className="text-center flex justify-center h-16 mt-16">
               <img className="block " src={Adidas} alt="" />
             </div>
-            <div className="text-center">
+            <div className="text-center flex justify-center h-16 mt-16">
               <img className="block " src={Yahoo} alt="" />
             </div>
           </div>
@@ -142,7 +161,12 @@ function Landing() {
             just for you
           </p>
         </section>
-        <section></section>
+
+        <section className="sub-card flex">
+          <section>1</section>
+          <section>2</section>
+          <section>3</section>
+        </section>
         <section></section>
         <section></section>
         <section></section>

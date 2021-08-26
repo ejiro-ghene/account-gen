@@ -5,9 +5,25 @@
   text-decoration: none;
 }
 
+.header-overlay {
+  /* background: linear-gradient(#111438c6, #111438c6); */
+  /* background: #051622CC; */
+  background: linear-gradient(#051622cc, #051622cc);
+}
+
+.logo-header {
+  top: 6rem;
+  padding-left: 31rem;
+}
+.header-text {
+  top: 20rem;
+  color: #ffffff;
+  padding-left: 21rem;
+}
+
 .btn {
   position: absolute;
-  top: 35rem;
+  top: 31rem;
   padding-left: 28.8rem;
 }
 
