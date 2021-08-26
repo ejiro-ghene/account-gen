@@ -56,7 +56,7 @@ const Login = () => {
     <>
       <main className="acct-login-container min-h-screen mx-14">
         <Navbar />
-        <section className="login-card grid grid-col-2 shadow-xl">
+        <section className="login-card grid grid-cols-2 shadow-xl">
           <section className="login-logo text-white ">
             <img className=" mt-72 w-48 ml-24" src={Logo} alt="" />
             <div className=" mt-28">

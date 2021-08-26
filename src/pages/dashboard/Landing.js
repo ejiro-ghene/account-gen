@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Landing.css";
 import {
   Adidas,
@@ -21,7 +22,7 @@ function Landing() {
   return (
     <>
       <main className="min-h-screen ">
-        <Navbar className="" />
+        <Navbar />
         <header className="relative ">
           <div>
             <img
@@ -45,16 +46,16 @@ function Landing() {
             </h6>
           </div>
           <div className="btn flex gap-4">
-            <div>
+            <Link to="/signup">
               <button className="b-1  text-xl ">REGISTER</button>
-            </div>
-            <div>
+            </Link>
+            <Link to="/login">
               <button className="b-2  h-12 text-xl  ">SIGN IN</button>
-            </div>
+            </Link>
           </div>
         </header>
 
-        <section className="grid grid-cols-2 gap-20 h-96">
+        <section className="grid grid-cols-2 gap-20">
           <div className="m-24  h-72">
             <h1 className="font-semibold ml-7 text-2xl">
               Create multiple accounts very easily with just one click
@@ -68,8 +69,9 @@ function Landing() {
               vestibulum.
             </p>
           </div>
-          <div className="m-20 shadow-2xl  grid grid-cols-3 gap-">
-            <div className="text-center flex justify-center h-16 mt-16">
+
+          <div className="m-20 shadow-2xl  grid grid-cols-3 ">
+            <div className="text-center flex justify-center h-20 mt-16">
               <img className="block " src={Outlook} alt="" />
             </div>
             <div className="text-center flex justify-center h-16 mt-16">
@@ -133,15 +135,14 @@ function Landing() {
           </div>
         </section>
 
-        <section className="login-screenshot h-72 m-48 grid grid-cols-2 gap-20">
-          <div>
-            <img className="block" src={Image1} alt="" />
-          </div>
-          <div>
+        <section className="login-screenshot m-28 grid grid-cols-2 gap-3">
+          <img className="block ml-20 mt-5" src={Image1} alt="" />
+
+          <div className="mt-14 mx-10">
             <h1 className="font-semibold text-2xl">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </h1>
-            <p className="text-base pt-8">
+            <p className="text-base pt-8 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
               rhoncus lacinia lorem, iaculis mollis ligula consequat vitae. In
               vehicula nisl imperdiet neque sagittis, sit amet sodales ex
@@ -152,18 +153,18 @@ function Landing() {
           </div>
         </section>
 
-        <section className="h-48 mt-40">
+        <section className="">
           <header className="font-semibold text-4xl flex justify-center">
             Our Custom Plans
           </header>
-          <p className="flex justify-center text-xl text-center pt-4">
+          <p className="flex justify-center text-lg text-center pt-4">
             We have taken time to create plans that <br /> have been tailor made
             just for you
           </p>
         </section>
 
-        <section className="sub-card flex">
-          <section>1</section>
+        <section className="sub-card grid grid-cols-3">
+          <section className="sub-card1 w-28 h-48">1</section>
           <section>2</section>
           <section>3</section>
         </section>

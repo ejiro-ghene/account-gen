@@ -14,7 +14,10 @@ function Navbar() {
         <Link to="/about">Support</Link>
         <Link to="/about">Contact us</Link>
         <div>English</div>
-        <button className="w-28 h-9">Sign In</button>
+        <Link to="/login">
+          {" "}
+          <button className="w-36 h-11">Sign In</button>
+        </Link>
       </div>
     </nav>
   );
