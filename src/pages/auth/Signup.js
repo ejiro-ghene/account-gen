@@ -31,16 +31,8 @@ const Signup = () => {
       const emailRegex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
       if (emailRegex.test(email)) {
         setEmailError("");
-        if (email === "ad@demo.com") {
-          setEmailError("");
-          if (password === "demo") {
-            setSuccessMsg("You have successfully logged in");
-          } else {
-            setPasswordError("Password does not match with the email address");
-          }
-        } else {
-          setEmailError("email does not match with our database");
-        }
+      } else {
+        setEmailError("email does not match with our database");
       }
     } else {
       setEmailError("Email Required");
@@ -48,7 +40,7 @@ const Signup = () => {
 
     if (password !== "") {
     } else {
-      setPasswordError("Password Required");
+      setPasswordError(" Password Required");
     }
   };
   return (
@@ -79,13 +71,14 @@ const Signup = () => {
                 className="grid self-center gap-6 mx-20 mt-14"
                 onSubmit={handleFormSubmit}
               >
-                <label className="text-xl">Email</label>
+                <label className="text-xl">Name</label>
                 <input
                   className="border border-black "
-                  name="email"
-                  type="email"
+                  name="name"
+                  type="text"
                   onChange={handleEmailChange}
-                  value={email}
+                  // value={email}
+                  placeholder="Enter full name"
                 />
 
                 <label className="text-xl"> Password</label>

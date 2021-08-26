@@ -15,7 +15,6 @@ function Navbar() {
         <Link to="/about">Contact us</Link>
         <div>English</div>
         <Link to="/login">
-          {" "}
           <button className="w-36 h-11">Sign In</button>
         </Link>
       </div>

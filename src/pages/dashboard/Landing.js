@@ -164,7 +164,7 @@ function Landing() {
         </section>
 
         <section className="sub-card grid grid-cols-3">
-          <section className="sub-card1 w-28 h-48">1</section>
+          <section className="sub-card1 ml-10 w-40 h-60">1</section>
           <section>2</section>
           <section>3</section>
         </section>
