@@ -28,6 +28,13 @@
   /* height: 30rem; */
 }
 
+.proxy {
+  background-color: #6fabd6;
+  width: 54rem;
+  color: #ffffff;
+  padding: 10px 0 0 10px;
+  height: 28rem;
+}
 /* .one,
 .two {
   grid-template-row: 1fr 2fr;

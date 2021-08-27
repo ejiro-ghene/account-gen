@@ -66,6 +66,13 @@ function Dashboard() {
               </div>
             </div>
           </section>
+
+          {/* for the proxy */}
+          <div className=" mt-16 grid grid-row-2 absolute  top-10 ml-20 proxy">
+            <div className="flex justify-end px-10 ">
+              <MdDelete />
+            </div>
+          </div>
         </main>
       </section>
     </>
