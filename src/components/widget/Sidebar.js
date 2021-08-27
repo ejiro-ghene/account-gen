@@ -21,11 +21,13 @@ function Sidebar() {
 
         <section className="side-text flex justify-center py-10 text-white ">
           <nav className="grid  space-y-20 py-16">
-            <button className="">
-              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
-                Task
-              </a>
-            </button>
+            <Link to="/task">
+              <button className="">
+                <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+                  Task
+                </a>
+              </button>
+            </Link>
 
             <button className="">
               <a href="" class=" py-3 px-10 rounded hover:bg-gray-700 ">
