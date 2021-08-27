@@ -188,7 +188,7 @@ function Landing() {
             </div>
           </section>
 
-          <section className="sub-card2 lg:w-80 sm:w-2/3 rounded-lg overflow-hidden shadow-md text-white">
+          <section className="sub-card2 lg:w-80 sm:w-2/3 rounded-lg overflow-hidden shadow-2xl text-white">
             <header className="font-semibold text-4xl p-6 flex justify-center">
               Standard
             </header>

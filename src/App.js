@@ -10,6 +10,7 @@ import { Dashboard } from "./pages";
 import { Landing } from "./pages";
 import { Login } from "./pages";
 import { Signup } from "./pages";
+import { Task } from "./pages";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/task" component={Task} />
         </Switch>
       </Router>
     </>

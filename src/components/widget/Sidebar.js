@@ -20,19 +20,30 @@ function Sidebar() {
         </section> */}
 
         <section className="side-text flex justify-center py-10 text-white ">
-          <nav className="grid grid-row-4 gap-9 py-5 ">
-            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
-              Task
-            </a>
-            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700 ">
-              Proxy
-            </a>
-            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
-              Account
-            </a>
-            <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
-              Setting
-            </a>
+          <nav className="grid  space-y-20 py-16">
+            <button className="">
+              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+                Task
+              </a>
+            </button>
+
+            <button className="">
+              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700 ">
+                Proxy
+              </a>
+            </button>
+
+            <button className="">
+              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+                Account
+              </a>
+            </button>
+
+            <button className="">
+              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+                Setting
+              </a>
+            </button>
           </nav>
           {/* <button>
             <h3 className="  ">Task</h3>
