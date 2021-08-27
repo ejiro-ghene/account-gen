@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Navbar, Sidebar, Footer } from "../../components";
 import { Logo } from "../../assets";
 import "./Login.css";
@@ -31,16 +32,8 @@ const Login = () => {
       const emailRegex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
       if (emailRegex.test(email)) {
         setEmailError("");
-        if (email === "ad@demo.com") {
-          setEmailError("");
-          if (password === "demo") {
-            setSuccessMsg("You have successfully logged in");
-          } else {
-            setPasswordError("Password does not match with the email address");
-          }
-        } else {
-          setEmailError("email does not match with our database");
-        }
+      } else {
+        setEmailError("email does not match with our database");
       }
     } else {
       setEmailError("Email Required");
@@ -102,10 +95,14 @@ const Login = () => {
                   <div className="error-msg">{passwordError}</div>
                 )}
                 <h4 className="reminder  mt-2 text-xl">Forget Password</h4>
-                <button className="signin h-12 text-xl mt-8">Sign In</button>
+                <Link to="/dashboard">
+                  <button className="signin h-12 text-xl mt-8">Sign In</button>
+                </Link>
                 <span className="text-gray-500 text-xl">
                   Don't have an account?
-                  <button className="login-signup">Signup</button>
+                  <Link to="/dashboard">
+                    <button className="login-signup">Signup</button>
+                  </Link>
                 </span>
               </form>
             </fieldset>
