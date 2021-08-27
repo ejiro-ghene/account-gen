@@ -47,6 +47,34 @@
   background-color: #051622;
 }
 
-.sub-card1 {
+.sub-card1,
+.sub-card3 {
   border: 1px solid #1ba098;
+}
+
+.sub-card2 {
+  background-color: #051622;
+}
+
+.sub-card1,
+.sub-card3 {
+  height: 33rem;
+  color: #0b0c70;
+}
+
+.sub-card2 {
+  height: 33rem;
+}
+
+.sub-card1 button,
+.sub-card3 button {
+  background-color: #1ba098;
+  width: 13rem;
+  height: 3.4rem;
+}
+
+.sub-card2 button {
+  color: #1ba098;
+  width: 13rem;
+  height: 3.4rem;
 }

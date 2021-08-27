@@ -163,11 +163,76 @@ function Landing() {
           </p>
         </section>
 
-        <section className="sub-card grid grid-cols-3">
-          <section className="sub-card1 ml-10 w-40 h-60">1</section>
-          <section>2</section>
-          <section>3</section>
+        {/* subscription card */}
+        <section className="sub-card flex flex-wrap gap-16 mt-20 justify-center">
+          <section className="sub-card1 lg:w-80 sm:w-2/3  rounded-lg overflow-hidden shadow-md ">
+            <header className="font-semibold text-4xl p-6 flex justify-center">
+              Free
+            </header>
+            <div className="w-36  ml-24 mt-3">
+              <span className="flex justify-center p-1 h-10 rounded border-2 border-blue-200 text-xl">
+                $0
+              </span>
+            </div>
+
+            <div className="text-center text-xl pt-8 space-y-3">
+              <li>Google Ads</li>
+              <li>Social Media</li>
+              <li>Email Marketing</li>
+              <li>24/7 Customer Services</li>
+              <div>
+                <button className="font-semibold my-20 text-xl rounded">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section className="sub-card2 lg:w-80 sm:w-2/3 rounded-lg overflow-hidden shadow-md text-white">
+            <header className="font-semibold text-4xl p-6 flex justify-center">
+              Standard
+            </header>
+            <div className="w-36  ml-24 mt-3">
+              <span className="flex text-xl justify-center p-1 h-10 rounded bg-white text-blue-900">
+                $100/Month
+              </span>
+            </div>
+            <div className="text-center pt-8 text-xl space-y-3">
+              <li>Google Ads</li>
+              <li>Social Media</li>
+              <li>Email Marketing</li>
+              <li>24/7 Customer Services</li>
+              <div>
+                <button className="font-semibold my-20 text-xl rounded bg-white ">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section className="sub-card3 lg:w-80 sm:w-2/3  rounded-lg overflow-hidden shadow-md ">
+            <header className="font-semibold text-4xl p-6 flex justify-center">
+              Premium
+            </header>
+            <div className="w-36  mt-3 ml-24">
+              <span className="flex justify-center p-1 h-10 rounded border-2 border-blue-200 text-xl">
+                $200/Month
+              </span>
+            </div>
+            <div className="text-center text-xl pt-8 space-y-3">
+              <li>Google Ads</li>
+              <li>Social Media</li>
+              <li>Email Marketing</li>
+              <li>24/7 Customer Services</li>
+              <div>
+                <button className="font-semibold my-20 text-xl rounded">
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </section>
         </section>
+
         <section></section>
         <section></section>
         <section></section>
