@@ -21,7 +21,7 @@ import { Navbar, Sidebar, Footer } from "../../components";
 function Landing() {
   return (
     <>
-      <main className="min-h-screen ">
+      <section className="min-h-screen ">
         <Navbar />
         <header className="relative ">
           <div>
@@ -237,7 +237,7 @@ function Landing() {
         <section></section>
         <section></section>
         <Footer />
-      </main>
+      </section>
     </>
   );
 }

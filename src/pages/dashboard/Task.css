@@ -1,8 +1,10 @@
 main {
   width: 88%;
   margin-left: 11rem;
+  background-color: #03223883;
 }
 
 .task-card {
   background-color: #032238;
+  box-shadow: 30px 43px 37px rgba(40, 38, 38, 0.719);
 }

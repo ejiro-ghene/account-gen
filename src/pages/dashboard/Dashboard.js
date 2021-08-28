@@ -12,7 +12,7 @@ function Dashboard() {
           <Sidebar />
         </aside>
 
-        <main className="dash-container relative min-h-screen ml-40">
+        <section className="dash-container relative min-h-screen ml-40">
           <section className="dash-task grid grid-col-2 gap-10  ml-14">
             <div className=" mt-16 grid grid-row-2  one">
               <header>Nike request</header>
@@ -73,7 +73,7 @@ function Dashboard() {
               <MdDelete />
             </div>
           </div>
-        </main>
+        </section>
       </section>
     </>
   );

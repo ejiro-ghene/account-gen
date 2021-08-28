@@ -1,6 +1,7 @@
 .sidenav {
   background-color: #051622;
   z-index: 10;
+  height: 200%;
 }
 
 .user-profile-button {

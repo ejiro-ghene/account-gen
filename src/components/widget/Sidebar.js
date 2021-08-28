@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import { FaUserCircle } from "react-icons/fa";
 
 function Sidebar() {
   return (
     <>
-      <section className="sidenav absolute inset-y-0 w-40 ">
+      <section className="sidenav absolute inset-y-0 w-44 ">
         {/* <section className="user-profile-container py-5 px-2">
           <button className="user-profile-button w-44 flex justify-between p-2 ">
             <div className="avatar-icon text-4xl">
@@ -23,26 +24,26 @@ function Sidebar() {
           <nav className="grid  space-y-20 py-16">
             <Link to="/task">
               <button className="">
-                <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+                <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
                   Task
                 </a>
               </button>
             </Link>
 
             <button className="">
-              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700 ">
+              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700 ">
                 Proxy
               </a>
             </button>
 
             <button className="">
-              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
                 Account
               </a>
             </button>
 
             <button className="">
-              <a href="" class=" py-3 px-10 rounded hover:bg-gray-700">
+              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
                 Setting
               </a>
             </button>
