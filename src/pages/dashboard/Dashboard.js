@@ -12,9 +12,9 @@ function Dashboard() {
           <Sidebar />
         </aside>
 
-        <section className="dash-container relative min-h-screen ml-40">
-          <section className="dash-task grid grid-col-2 gap-10  ml-14">
-            <div className=" mt-16 grid grid-row-2  one">
+        <section className="dash-container relative  ml-40">
+          <section className="dash-task grid grid-col-2 gap-4  ml-24">
+            <div className=" mt-12 grid grid-row-2  one">
               <header>Nike request</header>
               <p className="text-sm px-4 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -27,7 +27,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className=" mt-16 grid grid-row-2  two">
+            <div className=" mt-12 grid grid-row-2  two">
               <header>Nike request</header>
               <p className="text-sm px-4 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -40,7 +40,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className=" mt-16 grid grid-row-2  three">
+            <div className=" mt-12 grid grid-row-2  three">
               <header>Nike request</header>
               <p className="text-sm px-4 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -53,7 +53,7 @@ function Dashboard() {
               </div>
             </div>
 
-            <div className=" mt-16 grid grid-row-2  four">
+            <div className=" mt-12 grid grid-row-2  four">
               <header>Nike request</header>
               <p className="text-sm px-4 ">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -68,11 +68,11 @@ function Dashboard() {
           </section>
 
           {/* for the proxy */}
-          <div className=" mt-16 grid grid-row-2 absolute  top-10 ml-20 proxy">
+          {/* <div className=" mt-16 grid grid-row-2 absolute  top-10 ml-20 proxy">
             <div className="flex justify-end px-10 ">
               <MdDelete />
             </div>
-          </div>
+          </div> */}
         </section>
       </section>
     </>

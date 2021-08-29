@@ -1,11 +1,11 @@
 .dash-container {
-  background-color: #0a2437ee;
+  background-color: #051622e1;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .task-bar {
-  background-color: #051622;
+  background-color: #032238;
   width: 30rem;
   height: 2rem;
   /* margin-top: 30px; */
@@ -18,11 +18,12 @@
 .two,
 .three,
 .four {
-  background-color: #051622;
+  background-color: #495a66d5;
   width: 30rem;
   color: #ffffff;
   padding: 10px 0 0 10px;
-  height: 15rem;
+  height: 17rem;
+  border-radius: 0.7rem;
   /* margin-top: 50px 0 0 -10; */
 
   /* height: 30rem; */

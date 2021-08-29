@@ -13,7 +13,7 @@ function Task() {
   return (
     <>
       <Sidebar />
-      <main className="w-auto grid grid-cols-2 gap-y-1 ">
+      <main className="task-container w-auto grid grid-cols-2 gap-y-1 ">
         <div className="task-card rounded-2xl shadow-2xl text-white px-16  mx-10 h-80 text-sm">
           {/* card1 */}
           <form className="p-4 relative  grid self-center gap-2" action="">
