@@ -13,11 +13,11 @@ function Task() {
   return (
     <>
       <Sidebar />
-      <main className="min-h-screen grid grid-cols-2 gap-y-10 ">
-        <div className="task-card rounded-2xl shadow-2xl text-white px-16 pt-24 mt-10 mx-10  ">
+      <main className="w-auto grid grid-cols-2 gap-y-1 ">
+        <div className="task-card rounded-2xl shadow-2xl text-white px-16  mx-10 h-80 text-sm">
           {/* card1 */}
-          <form className=" relative  grid self-center gap-6" action="">
-            <label className=" text-2xl" for="accounts">
+          <form className="p-4 relative  grid self-center gap-2" action="">
+            <label className=" text-xl" for="accounts">
               Select account:
             </label>
             <select
@@ -35,7 +35,7 @@ function Task() {
               <option value="adidas">Adidas</option>
             </select>
 
-            <label className="text-2xl" for="recovery">
+            <label className="text-xl" for="recovery">
               Recovery mail
             </label>
             <input
@@ -45,7 +45,7 @@ function Task() {
               placeholder="recoverymail@gmail.com"
             />
 
-            <label className=" text-2xl" for="quantity">
+            <label className=" text-xl" for="quantity">
               Number of accounts
             </label>
             <input
@@ -57,7 +57,7 @@ function Task() {
               placeholder="maximum of 100"
             />
             <div className="ml-28">
-              <button className="font-semibold my-20 text-2xl bg-red-600 rounded w-40 ">
+              <button className="font-semibold my-10 text-xl bg-red-600 rounded w-40 ">
                 Submit
               </button>
             </div>
@@ -66,9 +66,9 @@ function Task() {
         </div>
 
         {/* card2 */}
-        <div className="task-card rounded-2xl shadow-2xl text-white px-16 pt-24 mt-10 mx-10 h-auto">
-          <form className=" relative grid self-center gap-6" action="">
-            <label className=" text-2xl" for="accounts">
+        <div className="task-card rounded-2xl shadow-2xl text-white px-16  mx-10 h-80 text-sm">
+          <form className="p-4 relative grid self-center gap-2" action="">
+            <label className=" text-xl" for="accounts">
               Select account:
             </label>
             <select className="text-black" name="accounts" id="accounts">
@@ -77,7 +77,7 @@ function Task() {
               <option value="adidas">Adidas</option>
             </select>
 
-            <label className="text-2xl" for="recovery">
+            <label className="text-xl" for="recovery">
               Recovery mail
             </label>
             <input
@@ -88,7 +88,7 @@ function Task() {
               placeholder="recoverymail@gmail.com"
             />
 
-            <label className=" text-2xl" for="quantity">
+            <label className=" text-xl" for="quantity">
               Number of accounts
             </label>
             <input
@@ -102,7 +102,7 @@ function Task() {
             />
 
             <div className="ml-28">
-              <button className="font-semibold my-20 text-2xl bg-red-600 rounded w-40 ">
+              <button className="font-semibold my-10 text-2xl bg-red-600 rounded w-40 ">
                 Submit
               </button>
             </div>
@@ -110,10 +110,10 @@ function Task() {
           </form>
         </div>
 
-        <div className="task-card rounded-2xl shadow-2xl text-white px-16 pt-24 mt-10 mx-10 h-auto ">
+        <div className="task-card rounded-2xl shadow-2xl text-white px-16  mx-10 h-80 text-sm ">
           {/* card3 */}
-          <form className=" relative  grid self-center gap-6" action="">
-            <label className=" text-2xl" for="accounts">
+          <form className="p-4 relative  grid self-center gap-2" action="">
+            <label className=" text-xl" for="accounts">
               Select account:
             </label>
             <select className="text-black" name="accounts" id="accounts">
@@ -122,7 +122,7 @@ function Task() {
               <option value="adidas">Adidas</option>
             </select>
 
-            <label className="text-2xl" for="recovery">
+            <label className="text-xl" for="recovery">
               Recovery mail
             </label>
             <input
@@ -144,7 +144,7 @@ function Task() {
               placeholder="maximum of 100"
             />
             <div className="ml-28">
-              <button className="font-semibold my-20 text-2xl bg-red-600 rounded w-40 ">
+              <button className="font-semibold my-10 text-2xl bg-red-600 rounded w-40 ">
                 Submit
               </button>
             </div>
@@ -152,10 +152,10 @@ function Task() {
           </form>
         </div>
 
-        {/* card2 */}
-        <div className="task-card rounded-2xl shadow-2xl text-white px-16 pt-24 mt-10 mx-10 h-auto">
-          <form className=" relative grid self-center gap-6" action="">
-            <label className=" text-2xl" for="accounts">
+        {/* card4 */}
+        <div className="task-card rounded-2xl shadow-2xl text-white px-16  mx-10 h-80 text-sm">
+          <form className="p-4 relative grid self-center gap-2" action="">
+            <label className=" text-xl" for="accounts">
               Select account:
             </label>
             <select className="text-black" name="accounts" id="accounts">
@@ -164,7 +164,7 @@ function Task() {
               <option value="adidas">Adidas</option>
             </select>
 
-            <label className="text-2xl" for="recovery">
+            <label className="text-xl" for="recovery">
               Recovery mail
             </label>
             <input
@@ -175,7 +175,7 @@ function Task() {
               placeholder="recoverymail@gmail.com"
             />
 
-            <label className=" text-2xl" for="quantity">
+            <label className=" text-xl" for="quantity">
               Number of accounts
             </label>
             <input
@@ -189,7 +189,7 @@ function Task() {
             />
 
             <div className="ml-28">
-              <button className="font-semibold my-20 text-2xl bg-red-600 rounded w-40 ">
+              <button className="font-semibold my-10 text-2xl bg-red-600 rounded w-40 ">
                 Submit
               </button>
             </div>

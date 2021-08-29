@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Sidebar, Navbar, Footer } from "../../components";
 import { TextArea } from "@thumbtack/thumbprint-react";
-import "./Proxyy.css";
+import "./Proxyy.scss";
 
 function Proxyy() {
   const [name, setName] = React.useState("");
@@ -13,9 +13,11 @@ function Proxyy() {
 
   return (
     <>
-      <Sidebar />
-      <section className="proxy-container ">
-        <div>
+      <aside>
+        <Sidebar />
+      </aside>
+      <section className="proxy-container w-auto ml-40">
+        <div className="proxy-text p-40 ">
           <label>
             <TextArea
               type="text"
