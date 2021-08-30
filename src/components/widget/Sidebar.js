@@ -24,29 +24,25 @@ function Sidebar() {
           <nav className="grid  space-y-20 py-16">
             <Link to="/task">
               <button className="">
-                <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
-                  Task
-                </a>
+                <a className=" py-3 px-10 rounded hover:bg-gray-700">Task</a>
+              </button>
+            </Link>
+
+            <Link to="/proxy">
+              <button className="">
+                <a className=" py-3 px-10 rounded hover:bg-gray-700 ">Proxy</a>
               </button>
             </Link>
 
             <button className="">
-              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700 ">
-                Proxy
-              </a>
+              <a className=" py-3 px-10 rounded hover:bg-gray-700">Account</a>
             </button>
 
-            <button className="">
-              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
-                Account
-              </a>
-            </button>
-
-            <button className="">
-              <a href="" className=" py-3 px-10 rounded hover:bg-gray-700">
-                Setting
-              </a>
-            </button>
+            <Link to="/setting">
+              <button className="">
+                <a className=" py-3 px-10 rounded hover:bg-gray-700">Setting</a>
+              </button>
+            </Link>
           </nav>
           {/* <button>
             <h3 className="  ">Task</h3>

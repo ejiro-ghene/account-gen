@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Sidebar, Navbar, Footer } from "../../components";
+import { Sidebar } from "../../components";
 import { TextArea } from "@thumbtack/thumbprint-react";
 import "./Proxyy.scss";
 
