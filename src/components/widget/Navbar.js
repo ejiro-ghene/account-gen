@@ -4,10 +4,17 @@ import "./Navbar.css";
 import { Logo2 } from "../../assets";
 
 function Navbar() {
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.pathnamme = "/login";
+  };
+
   return (
     <nav className="nav-acct grid grid-col-2">
       <div className="nav-container   ">
-        <img className=" mt-3 w-28 block" src={Logo2} alt="" />
+        <Link to="/">
+          <img className=" mt-3 w-28 block" src={Logo2} alt="" />
+        </Link>
       </div>
       <div className=" nav-text flex justify-between text-xl">
         <Link to="/about">About</Link>
@@ -17,6 +24,9 @@ function Navbar() {
         <Link to="/login">
           <button className="w-36 h-11">Sign In</button>
         </Link>
+        <button className="w-36 h-11" onClick={handleLogout}>
+          Logout
+        </button>
       </div>
     </nav>
   );

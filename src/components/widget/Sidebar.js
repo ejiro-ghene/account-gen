@@ -22,13 +22,13 @@ function Sidebar() {
 
         <section className="side-text flex justify-center py-10 text-white ">
           <nav className="grid  space-y-20 py-16">
-            <Link to="/task">
+            <Link to="/dashboard/task">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700">Task</a>
               </button>
             </Link>
 
-            <Link to="/proxy">
+            <Link to="dashboard/proxy">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700 ">Proxy</a>
               </button>
@@ -38,24 +38,12 @@ function Sidebar() {
               <a className=" py-3 px-10 rounded hover:bg-gray-700">Account</a>
             </button>
 
-            <Link to="/setting">
+            <Link to="dashboard/setting">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700">Setting</a>
               </button>
             </Link>
           </nav>
-          {/* <button>
-            <h3 className="  ">Task</h3>
-          </button>
-          <button>
-            <h3 className="  ">Proxy</h3>
-          </button>
-          <button>
-            <h3 className="  ">Account</h3>
-          </button>
-          <button>
-            <h3 className="  ">Setting</h3>
-          </button> */}
         </section>
       </section>
     </>

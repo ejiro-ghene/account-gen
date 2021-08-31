@@ -1,6 +1,7 @@
 import "./App.css";
 import "./output.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ProtectedRoute from "./components/widget/ProtectedRoute";
 // import "./components/widget/Sidebar";
 // import "./components/widget/Navbar";
 // import "./pages/auth/Registration";
@@ -19,13 +20,13 @@ function App() {
     <>
       <Router>
         <Switch>
-          <Route path="/" exact component={Landing} />
-          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/task" component={Task} />
-          <Route path="/proxy" component={Proxyy} />
-          <Route path="/setting" component={Setting} />
+          <ProtectedRoute path="/dashboard" component={Dashboard} />
+          <ProtectedRoute path="/dashboard/task" component={Task} />
+          <ProtectedRoute path="/dashboard/proxy" component={Proxyy} />
+          <ProtectedRoute path="/dashboard/setting" component={Setting} />
         </Switch>
       </Router>
     </>

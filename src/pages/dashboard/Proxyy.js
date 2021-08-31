@@ -16,19 +16,6 @@ function Proxyy() {
       <aside>
         <Sidebar />
       </aside>
-      <section className="proxy-container w-auto ml-40">
-        <div className="proxy-text p-40 ">
-          <label>
-            <TextArea
-              type="text"
-              value={name}
-              placeholder="Type something..."
-              onChange={(v) => setName(v)}
-            />
-          </label>
-          {/* <input type="submit" value="Submit" /> */}
-        </div>
-      </section>
     </>
   );
 }

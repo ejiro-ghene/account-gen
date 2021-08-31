@@ -1,49 +1,76 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { Navbar, Sidebar, Footer } from "../../components";
+import { Link, useHistory } from "react-router-dom";
+import { Navbar, Footer } from "../../components";
 import { Logo } from "../../assets";
 import "./Login.css";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
+  const [userData, setUserData] = useState({ email: "", password: "" });
+  const [errorMessage, setErrorMessage] = useState({ value: "" });
+  const history = useHistory();
+  console.log("auth", localStorage.getItem("isAuthenticated"));
 
-  const [password, setPassword] = useState("");
-  const [passwordError, setPasswordError] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [passwordError, setPasswordError] = useState("");
 
   const [SuccessMsg, setSuccessMsg] = useState("");
 
-  const handleEmailChange = (e) => {
-    setSuccessMsg("");
-    setEmailError("");
-    setEmail(e.target.value);
+  const handleInputChange = (e) => {
+    setUserData((prevState) => {
+      return {
+        ...prevState,
+        [e.target.name]: e.target.value,
+      };
+    });
+    // setSuccessMsg("");
+    // setEmailError("");
+    // setEmail(e.target.value);
   };
 
-  const handlePasswordChange = (e) => {
-    setSuccessMsg("");
-    setPasswordError("");
-    setPassword(e.target.value);
-  };
+  // const handlePasswordChange = (e) => {
+  //   setSuccessMsg("");
+  //   setPasswordError("");
+  //   setPassword(e.target.value);
+  // };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
-    if (email !== "") {
-      const emailRegex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
-      if (emailRegex.test(email)) {
-        setEmailError("");
-      } else {
-        setEmailError("email does not match with our database");
-      }
-    } else {
-      setEmailError("Email Required");
+    if (userData.email === "" || userData.password === "") {
+      setErrorMessage((prevState) => ({
+        value: "Empty email/password field",
+      }));
     }
-
-    if (password !== "") {
+    // else fetch from api
+    else if (
+      userData.email.toLowerCase() === "admin" &&
+      userData.password === "123456"
+    ) {
+      //Signin Success
+      localStorage.setItem("isAuthenticated", "true");
+      window.location.pathname = "/dashboard";
     } else {
-      setPasswordError("Password Required");
+      //If credentials entered is invalid
+      setErrorMessage((prevState) => ({ value: "Invalid email/password" }));
+      return;
     }
   };
+
+  //   if (email !== "") {
+  //     const emailRegex = /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/;
+  //     if (emailRegex.test(email)) {
+  //       setEmailError("");
+  //     } else {
+  //       setEmailError("email does not match with our database");
+  //     }
+  //   } else {
+  //     setEmailError("Email Required");
+  //   }
+
+  //   if (password !== "") {
+  //   } else {
+  //     setPasswordError("Password Required");
+  //   }
+  // };
 
   return (
     <>
@@ -51,7 +78,9 @@ const Login = () => {
         <Navbar />
         <section className="login-card grid grid-cols-2 shadow-xl">
           <section className="login-logo text-white ">
-            <img className=" mt-72 w-48 ml-24" src={Logo} alt="" />
+            <Link to="/home">
+              <img className=" mt-72 w-48 ml-24" src={Logo} alt="" />
+            </Link>
             <div className=" mt-28">
               <header className="mx-4 font-semibold text-4xl">
                 ALL IN ONE GENERATOR
@@ -69,41 +98,50 @@ const Login = () => {
                 LOGIN
               </header>
               {SuccessMsg && <div className="success-msg">{SuccessMsg}</div>}
-              <form
-                className="grid self-center gap-6 mx-20 mt-14"
-                onSubmit={handleFormSubmit}
-              >
+
+              <form className="grid self-center gap-6 mx-20 mt-14">
                 <label className="text-xl">Email</label>
                 <input
                   className="border border-black "
                   name="email"
                   type="email"
-                  onChange={handleEmailChange}
-                  value={email}
+                  onChange={(e) => handleInputChange(e)}
+                  // value={email}
                 />
-                {emailError && <div className="error-msg">{emailError}</div>}
+                {/* {emailError && <div className="error-msg">{emailError}</div>} */}
 
                 <label className="text-xl"> Password</label>
                 <input
                   className="border border-black"
                   name="password"
                   type="text"
-                  onChange={handlePasswordChange}
-                  value={password}
+                  onChange={(e) => handleInputChange(e)}
+                  // value={password}
                 />
-                {passwordError && (
+                {/* {passwordError && (
                   <div className="error-msg">{passwordError}</div>
-                )}
+                )} */}
                 <h4 className="reminder  mt-2 text-xl">Forget Password</h4>
+
+                {/* button link */}
                 <Link to="/dashboard">
-                  <button className="signin h-12 text-xl mt-8">Sign In</button>
+                  <button
+                    className="signin h-12 text-xl mt-8"
+                    onClick={handleFormSubmit}
+                  >
+                    Sign In
+                  </button>
                 </Link>
                 <span className="text-gray-500 text-xl">
                   Don't have an account?
+                  {/* button link */}
                   <Link to="/dashboard">
                     <button className="login-signup">Signup</button>
                   </Link>
                 </span>
+                {errorMessage.value && (
+                  <p className="text-red-500 text-2xl ">{errorMessage.value}</p>
+                )}
               </form>
             </fieldset>
 

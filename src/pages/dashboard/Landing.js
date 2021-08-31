@@ -15,6 +15,7 @@ import {
   Image1,
   Header1,
   Img,
+  logo,
 } from "../../assets";
 import { Navbar, Sidebar, Footer } from "../../components";
 
@@ -23,6 +24,7 @@ function Landing() {
     <>
       <section className="min-h-screen ">
         <Navbar />
+
         <header className="relative ">
           <div>
             <img
