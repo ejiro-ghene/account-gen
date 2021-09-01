@@ -14,29 +14,31 @@ function Task() {
     <>
       <Sidebar />
       {/* setting container */}
-      <section className="relative task-container min-h-screen ml-44">
-        <div className="mx-10 flex p-10 h-screen">
-          <section className="task-card p-5 rounded-xl text-white text-sm ">
-            <form className="grid m-12">
-              <label className="text-xl">Select account:</label>
-              <select className="text-black h-10">
+      <section className="relative task-container lg:min-h-screen sm:min-h-screen lg:ml-44">
+        <div className="lg:mx-10 lg:flex lg:p-10 sm:flex sm:justify-center sm:p-20 ">
+          <section className="task-card lg:p-5 sm:p-3 rounded-xl text-white text-sm ">
+            <form className="grid lg:m-12 sm:m-3">
+              <label className="lg:text-xl  sm:text-thin">
+                Select account:
+              </label>
+              <select className="text-black lg:h-10">
                 "<option value="google">Google</option>
                 <option value="nike">Nike</option>
                 <option value="adidas">Adidas</option>
               </select>
 
-              <label className="text-xl mt-4">Recovery</label>
+              <label className="lg:text-xl mt-4 sm:text-thin">Recovery</label>
               <input
                 type="email"
                 name=""
-                className="h-10"
+                className="lg:h-10"
                 placeholder="recoverymail@gmail.com"
               />
 
               <label htmlFor="">Number of accounts</label>
               <div className="flex justify-center">
                 <input
-                  className="font-semibold my-10 text-xl bg-red-600 rounded w-28 "
+                  className="font-semibold lg:my-10 sm:my-12 lg:text-xl bg-red-600 rounded w-28 sm:flex sm:justify-center"
                   type="submit"
                   Submit
                 />
