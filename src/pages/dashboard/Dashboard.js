@@ -13,7 +13,7 @@ function Dashboard() {
         </aside>
 
         <section className="dash-container relative  ml-40">
-          <section className="dash-task grid grid-col-2 gap-4  ml-24">
+          {/* <section className="dash-task grid grid-col-2 gap-4  ml-24">
             <div className=" mt-12 grid grid-row-2  one">
               <header>Nike request</header>
               <p className="text-sm px-4 ">
@@ -65,7 +65,7 @@ function Dashboard() {
                 <MdDelete />
               </div>
             </div>
-          </section>
+          </section> */}
 
           {/* for the proxy */}
           {/* <div className=" mt-16 grid grid-row-2 absolute  top-10 ml-20 proxy">
