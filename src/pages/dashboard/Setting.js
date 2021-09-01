@@ -16,7 +16,7 @@ const Setting = () => {
   return (
     <>
       <Sidebar />
-      <section className="relative setting-container min-h-screen ml-44">
+      <section className="relative setting-container min-h-screen ml-48">
         <div className="p-10">
           <section className="setting-section rounded">
             <form className="grid mx-12 pt-5">

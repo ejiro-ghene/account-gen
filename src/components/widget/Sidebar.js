@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import { FaUserCircle } from "react-icons/fa";
+import { Clipboard, Settings, User } from "../../assets";
 
 function Sidebar() {
   const handleLogout = () => {
@@ -32,23 +33,39 @@ function Sidebar() {
           </button>
         </div>
         {/* sidebar */}
-        <div className="sidenav md:w-44 text-lg font-bold text-white space-y-6 px-2 py-6  -inset-y-0 left-0 transform absolute -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
-          <nav className="grid  space-y-20 py-16">
-            <Link to="" className="block py-3 px-4 rounded hover:bg-gray-700">
+        <div className="sidenav md:w-48 text-lg font-bold text-white space-y-6 px-5 py-16 -inset-y-0 left-0 transform absolute -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+          <nav className="grid space-y-20 py-16">
+            <Link
+              to=""
+              className=" grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              <div className="w-12">
+                <img src={User} alt="" />
+              </div>
               Account
             </Link>
 
             <Link
               to="/task"
-              className="block py-3 px-4 rounded hover:bg-gray-700"
+              className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
             >
+              <div className="w-12 grid ">
+                <img src={Clipboard} alt="" />
+              </div>
               Task
             </Link>
 
             <Link
               to="/setting"
-              className="block py-3 px-4 rounded hover:bg-gray-700"
+              className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
             >
+              <div className="w-12 grid ">
+                <img
+                  src={Settings}
+                  alt="
+              "
+                />
+              </div>
               Setting
             </Link>
           </nav>

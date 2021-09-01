@@ -13,6 +13,9 @@ import Adidas from "./images/Adidas.jpg";
 import Nike from "./images/nike.jpg";
 import Time from "./images/time.jpg";
 import Easy from "./images/easy.jpg";
+import Clipboard from "./images/clipboard.png";
+import User from "./images/user.png";
+import Settings from "./images/settings.png";
 import Reliable from "./images/reliable.jpg";
 import Image1 from "./images/image1.jpg";
 import Img from "./images/h-img.png";
@@ -34,6 +37,9 @@ export {
   Nike,
   Time,
   Easy,
+  Clipboard,
+  User,
+  Settings,
   Reliable,
   Image1,
 };
