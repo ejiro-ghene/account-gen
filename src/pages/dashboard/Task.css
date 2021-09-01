@@ -1,12 +1,14 @@
 .task-container {
-  /* width: 88%;/ */
-  height: 100vh;
-  margin-left: 11rem;
-  background-color: #03223883;
+  background-color: #22333fec;
 }
 
 .task-card {
-  background-color: #032238;
-  /* height: auto; */
-  box-shadow: 30px 43px 37px rgba(40, 38, 38, 0.719);
+  background-color: #051622;
+  width: 40%;
+  /* grid-template-columns: 1fr, 2fr; */
+}
+
+.result {
+  background-color: #914310;
+  width: 48%;
 }

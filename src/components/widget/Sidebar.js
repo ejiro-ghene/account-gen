@@ -4,31 +4,69 @@ import "./Sidebar.css";
 import { FaUserCircle } from "react-icons/fa";
 
 function Sidebar() {
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.pathnamme = "/login";
+  };
   return (
     <>
-      <section className="sidenav absolute inset-y-0 w-44 ">
-        {/* <section className="user-profile-container py-5 px-2">
-          <button className="user-profile-button w-44 flex justify-between p-2 ">
-            <div className="avatar-icon text-4xl">
-              <FaUserCircle />
-            </div>
-
-            <div className="profile-id text-white ">
-              <h4 className="">Michael</h4>
-              <h6 className="active-text text-xs ">Active</h6>
-            </div>
+      <div className=" absolute min-h-screen md:flex ">
+        {/* mobile menu bar */}
+        <div className=" bg-red-800 flex justify-between md:hidden">
+          {/* menu button */}
+          <button className="mobile-menu-button p-4 focus:outline-none focus:bg-gray-700">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
-        </section> */}
+        </div>
+        {/* sidebar */}
+        <div className="sidenav md:w-44 text-lg font-bold text-white space-y-6 px-2 py-6  -inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+          <nav className="grid  space-y-20 py-16">
+            <Link to="" className="block py-3 px-4 rounded hover:bg-gray-700">
+              Account
+            </Link>
 
+            <Link
+              to="/task"
+              className="block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              Task
+            </Link>
+
+            <Link
+              to="/setting"
+              className="block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              Setting
+            </Link>
+          </nav>
+        </div>
+      </div>
+
+      {/* <div className="w-full">ggg</div> */}
+      {/* <section className="sidenav absolute inset-y-0 w-44 ">
+        
         <section className="side-text flex justify-center py-10 text-white ">
           <nav className="grid  space-y-20 py-16">
-            <Link to="/dashboard/task">
+            <Link to="/task">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700">Task</a>
               </button>
             </Link>
 
-            <Link to="dashboard/proxy">
+            <Link to="/proxy">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700 ">Proxy</a>
               </button>
@@ -38,14 +76,18 @@ function Sidebar() {
               <a className=" py-3 px-10 rounded hover:bg-gray-700">Account</a>
             </button>
 
-            <Link to="dashboard/setting">
+            <Link to="/setting">
               <button className="">
                 <a className=" py-3 px-10 rounded hover:bg-gray-700">Setting</a>
               </button>
             </Link>
+
+            <button className="w-36 h-11" onClick={handleLogout}>
+              Logout
+            </button>
           </nav>
         </section>
-      </section>
+      </section> */}
     </>
   );
 }

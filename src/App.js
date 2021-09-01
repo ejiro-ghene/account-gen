@@ -12,7 +12,7 @@ import { Landing } from "./pages";
 import { Login } from "./pages";
 import { Signup } from "./pages";
 import { Task } from "./pages";
-import { Proxyy } from "./pages";
+// import { Proxyy } from "./pages";
 import { Setting } from "./pages";
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
           <Route exact path="/" component={Landing} />
           <Route exact path="/login" component={Login} />
           <Route path="/signup" component={Signup} />
-          <ProtectedRoute path="/dashboard" component={Dashboard} />
-          <ProtectedRoute path="/dashboard/task" component={Task} />
-          <ProtectedRoute path="/dashboard/proxy" component={Proxyy} />
-          <ProtectedRoute path="/dashboard/setting" component={Setting} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/task" component={Task} />
+          {/* <Route path="/proxy" component={Proxyy} /> */}
+          <Route path="/setting" component={Setting} />
         </Switch>
       </Router>
     </>

@@ -3,9 +3,19 @@
   /* height: 100%; */
 }
 
-.setting {
-  width: 80%;
-
-  background-color: #051622ab;
-  padding: 5rem;
+.sidebar {
+  background-color: #051622;
+  display: flex;
+  justify-content: center;
+}
+.setting-section {
+  background-color: #051622;
+  /* height: 90%; */
+}
+.input1 {
+  background-color: #22333fec;
+}
+.text-list {
+  width: 90%;
+  background-color: #22333fec;
 }
