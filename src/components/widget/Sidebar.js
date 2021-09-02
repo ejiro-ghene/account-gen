@@ -33,13 +33,13 @@ function Sidebar() {
           </button>
         </div>
         {/* sidebar */}
-        <div className="sidenav md:w-48 text-lg font-bold text-white space-y-6 px-5 py-16 -inset-y-0 left-0 transform absolute -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+        <div className="sidenav md:w-48 text-lg font-bold text-white space-y-6 px-5 py-16 inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
           <nav className="grid space-y-20 py-16">
             <Link
-              to="/dashboard"
+              to=""
               className=" grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
             >
-              <div className="w-12">
+              <div className="w-10">
                 <img src={User} alt="" />
               </div>
               Account
@@ -49,7 +49,7 @@ function Sidebar() {
               to="/task"
               className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
             >
-              <div className="w-12 grid ">
+              <div className="w-10 grid ">
                 <img src={Clipboard} alt="" />
               </div>
               Task
@@ -59,7 +59,7 @@ function Sidebar() {
               to="/setting"
               className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
             >
-              <div className="w-12 grid ">
+              <div className="w-10 grid ">
                 <img
                   src={Settings}
                   alt="

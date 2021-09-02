@@ -12,10 +12,15 @@
   background-color: #051622;
   /* height: 90%; */
 }
+
+.setting-border {
+  /* background-color: #22333fec; */
+}
+
 .input1 {
   background-color: #22333fec;
 }
 .text-list {
-  width: 90%;
-  background-color: #22333fec;
+  /* width: 90%; */
+  /* background-color: #22333fec;/ */
 }

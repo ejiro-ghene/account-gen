@@ -1,0 +1,288 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./Sidebar.css";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Clipboard, Settings, User } from "../../assets";
+
+function Sidebar() {
+  const handleLogout = () => {
+    localStorage.clear();
+    window.location.pathnamme = "/login";
+  };
+
+  const [showMenu, setShowMenu] = useState(false);
+  let menu;
+  if (showMenu) {
+    menu = <div>nav-bar</div>;
+  }
+  // const handleClick = () => setClick(!click);
+  // const closeMobileMenu = () => setClick(false);
+
+  return (
+    <>
+      <div className=" absolute min-h-screen md:flex ">
+        {/* mobile menu bar */}
+        <div className=" bg-red-800 flex justify-between md:hidden w-screen">
+          {/* menu button */}
+          <div className="">
+            <nav>
+              <GiHamburgerMenu onClick={() => setShowMenu(!showMenu)} />
+            </nav>
+            {/* <button
+              className="inline-flex mobile-menu-button p-4 focus:outline-none focus:bg-gray-700"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button> */}
+          </div>
+        </div>
+        {/* sidebar */}
+        <div className="sidenav md:w-48 text-lg font-bold text-white space-y-6 px-5 py-16 -inset-y-0 left-0 transform absolute -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+          <nav className="nav-bar grid space-y-20 py-16">
+            <Link
+              to="/dashboard"
+              className=" grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              <div className="w-12">
+                <img src={User} alt="" />
+              </div>
+              Account
+            </Link>
+
+            <Link
+              to="/task"
+              className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              <div className="w-12 grid ">
+                <img src={Clipboard} alt="" />
+              </div>
+              Task
+            </Link>
+
+            <Link
+              to="/setting"
+              className="grid  grid-cols-2 block py-3 px-4 rounded hover:bg-gray-700"
+            >
+              <div className="w-12 grid ">
+                <img
+                  src={Settings}
+                  alt="
+              "
+                />
+              </div>
+              Setting
+            </Link>
+          </nav>
+        </div>
+      </div>
+
+      {/* <div className="w-full">ggg</div> */}
+      {/* <section className="sidenav absolute inset-y-0 w-44 ">
+        
+        <section className="side-text flex justify-center py-10 text-white ">
+          <nav className="grid  space-y-20 py-16">
+            <Link to="/task">
+              <button className="">
+                <a className=" py-3 px-10 rounded hover:bg-gray-700">Task</a>
+              </button>
+            </Link>
+
+            <Link to="/proxy">
+              <button className="">
+                <a className=" py-3 px-10 rounded hover:bg-gray-700 ">Proxy</a>
+              </button>
+            </Link>
+
+            <button className="">
+              <a className=" py-3 px-10 rounded hover:bg-gray-700">Account</a>
+            </button>
+
+            <Link to="/setting">
+              <button className="">
+                <a className=" py-3 px-10 rounded hover:bg-gray-700">Setting</a>
+              </button>
+            </Link>
+
+            <button className="w-36 h-11" onClick={handleLogout}>
+              Logout
+            </button>
+          </nav>
+        </section>
+      </section> */}
+    </>
+  );
+}
+
+export { Sidebar };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FROM SETTING.JS
+
+
+const Setting = () => {
+  const [list, setList] = useState([
+    // { input: "fff", id: 1 },
+    // { input: "ffssf", id: 2 },
+  ]);
+  const addList = (input) => {
+    setList([...list, { input }]);
+  };
+
+  return (
+    <>
+      <Sidebar />
+      <section className="relative setting-container min-h-screen ml-48">
+        <div className="p-11">
+          <section className="setting-section rounded">
+            <form className="grid mx-12 pt-14">
+              <label className="text-white text-md sm:text-">
+                Discord Webhook url
+              </label>
+              <input
+                className="text-black text-sm h-8 rounded input1"
+                type="email"
+                placeholder="discord webhook url"
+              />
+            </form>
+
+            <form className="grid mx-12 pt-5">
+              <label className="text-white text-md sm:text-">
+                Discord Webhook Username
+              </label>
+              <input
+                className="text-sm text-black h-8 rounded input1"
+                type="email"
+                placeholder="discord webhook username"
+              />
+            </form>
+
+            <form className="grid mx-12 pt-5">
+              <label className="text-white text-md sm:text-">
+                SMS-Active.ru API Key
+              </label>
+              <input
+                className="text-black text-sm h-8 rounded input1"
+                type="tel"
+                name=""
+                id=""
+                placeholder="SMS-Active.ru API Key"
+              />
+            </form>
+
+            <header className="text-white ml-12 mt-4">Proxy:</header>
+            <section className="flex justify-center">
+              <div className="text-list m-12 rounded text-white font-thin">
+                <ul>
+                  {list.map((content) => {
+                    return <li key={content.id}>{content.input}</li>;
+                  })}
+                </ul>
+                <Proxyy addList={addList} />
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </>
+  );
+};
+
+export { Setting };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+TASK ON GITHUB
+return (
+    <>
+      <Sidebar />
+      {/* setting container */}
+      <section className="relative task-container lg:min-h-screen sm:min-h-screen lg:ml-44">
+        <div className="lg:mx-10 lg:flex lg:p-10 sm:flex sm:justify-center sm:p-20 ">
+          <section className="task-card lg:p-5 sm:p-3 rounded-xl text-white text-sm ">
+            <form className="grid lg:m-12 sm:m-3">
+              <label className="lg:text-xl  sm:text-thin">
+                Select account:
+              </label>
+              <select className="text-black lg:h-10">
+                "<option value="google">Google</option>
+                <option value="nike">Nike</option>
+                <option value="adidas">Adidas</option>
+              </select>
+
+              <label className="lg:text-xl mt-4 sm:text-thin">Recovery</label>
+              <input
+                type="email"
+                name="email"
+                required
+                className="lg:h-10"
+                placeholder="recoverymail@gmail.com"
+              />
+
+              <label htmlFor="">Number of accounts</label>
+              <div className="flex justify-center">
+                <input
+                  className="font-semibold lg:my-10 sm:my-12 lg:text-xl bg-red-600 rounded w-28 sm:flex sm:justify-center"
+                  type="submit"
+                  name = 'quantity'
+                  required
+                />
+                <button
+                    className="signup h-12 text-xl mt-8"
+                    onClick={submit}
+                  >
+                    SUBMIT
+                  </button>
+
+              </div>
+            </form>
+
+            {/* <div className="result grid">hhhhhh</div> */}
+          </section>
+        </div>
+      </section>
+    </>
+  );
+}
+
+export { Task };

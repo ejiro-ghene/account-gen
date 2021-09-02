@@ -7,6 +7,9 @@
 // } */
 
 .p-input {
-  background-color: #22333fec;
+  /* background-color: #22333fec; */
   width: 27rem;
+}
+.text-box {
+  background-color: #22333fec;
 }

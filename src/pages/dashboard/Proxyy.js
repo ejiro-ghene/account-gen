@@ -12,28 +12,18 @@ const Proxyy = ({ addList }) => {
   };
   return (
     <>
-      <section className="proxy-container h-full m-10">
+      <section>
         <form
-          className="proxy-form grid grid-cols-2 mx-12 mt-32"
+          className="proxy-form grid grid-cols-2 mx-12"
           onSubmit={handleSubmit}
         >
-          {/* <label className="text-white"> Proxy:</label> */}
-
-          <input
+          {/* <input
             className="p-input font-thin mt-16"
             type="text"
             value={input}
             required
             onChange={(e) => setInput(e.target.value)}
-          />
-
-          <div className="pl-24">
-            <input
-              className="s-input bg-green-500 w-40 rounded  mt-16"
-              type="submit"
-              value="Save"
-            />
-          </div>
+          /> */}
         </form>
       </section>
     </>
